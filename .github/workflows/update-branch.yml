@@ -18,7 +18,7 @@ jobs:
       - uses: lcdsmao/update-branch@v3
         with:
           # Access token
-          token: ${{secrets.GITHUB_TOKEN}}
+          token: ${{secrets.PERSONAL_ACCESS_TOKEN}}
           # `Status checks` and `Require approvals` settings will be used
           # Or ignore this key then the action will automatically find main or master branch protection rule
           protectedBranchNamePattern: main
