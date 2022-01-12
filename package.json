@@ -1,0 +1,15 @@
+{
+  "name": "update-branch-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tai2/update-branch-test.git",
+  "author": "tai2 <hello@tai2.net>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write **/*.{json,md}",
+    "format:check": "prettier --check **/*.{json,md}"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
