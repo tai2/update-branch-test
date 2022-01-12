@@ -13,6 +13,6 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           base: main
-          required_approval_count: 2
+          required_approval_count: 1
           sort: 'created'
           direction: 'desc'
