@@ -1,0 +1,18 @@
+name: PR update
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  autoupdate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Automatically update PR
+        uses: adRise/update-pr-branch@v0.6.0
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          base: main
+          required_approval_count: 1
+          sort: 'created'
+          direction: 'desc'
