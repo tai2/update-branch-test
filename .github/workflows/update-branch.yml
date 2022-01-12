@@ -1,0 +1,25 @@
+name: Update feature branch
+
+on:
+  push:
+    branches:
+      - main
+  check_suite:
+    types:
+      - completed
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lcdsmao/update-branch@v3
+        with:
+          # Access token
+          token: ${{secrets.GITHUB_TOKEN}}
+          # `Status checks` and `Require approvals` settings will be used
+          # Or ignore this key then the action will automatically find main or master branch protection rule
+          protectedBranchNamePattern: main
+
